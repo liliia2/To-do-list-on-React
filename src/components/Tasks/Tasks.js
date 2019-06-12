@@ -1,10 +1,11 @@
 import React, {Fragment} from 'react';
 import Task from './Task/Task';
+import './Task/Task.css';
 
 const Tasks = ({tasks, listOfCompletedTask, clicked, iconClicked}) => {    
         return (
             <Fragment>
-            <span>List of tasks:</span>
+            <span className="subtitle">List of tasks:</span>
             {tasks.map((task, index) => (
                 <Task 
                     className={listOfCompletedTask && listOfCompletedTask.includes(task) ? 'completedTasks' : 'uncompletedTasks'} 

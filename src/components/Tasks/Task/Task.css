@@ -29,3 +29,9 @@
   width: 240px;
   padding: inherit;
 }
+
+.subtitle {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}

@@ -34,14 +34,14 @@ class App extends Component {
     }
   }
 
-  //Удаление таска - заменить сплайс и индексоф как в предыдущем
+  //Удаление таска
   deleteTask = (task) => {
     const {tasks, listOfCompletedTask} = this.state;
-    tasks.splice(tasks.indexOf(task), 1);
-    this.setState({tasks: tasks});
+    const cleanedFullList = tasks.filter(item => item !== task);
+    this.setState({tasks: cleanedFullList});
     if (listOfCompletedTask.includes(task)) {
-      listOfCompletedTask.splice(listOfCompletedTask.indexOf(task), 1);
-      this.setState({listOfCompletedTask: listOfCompletedTask});    
+      const cleanedList = listOfCompletedTask.filter(item => item !== task);
+      this.setState({listOfCompletedTask: cleanedList});    
     }
   }
 
