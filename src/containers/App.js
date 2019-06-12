@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Tasks from '../components/Tasks/Tasks';
-import Cockpit from '../components/Cockpit/Cockpit';
+import Statistics from '../components/Statistics/Statistics';
 import Inputfield from '../components/Inputfield/Inputfield';
 
 class App extends Component { 
@@ -67,7 +67,7 @@ class App extends Component {
 
   // Добавление нового таска по нажатию Enter
   handleKeyPressed = (target) => {
-    if(target.charCode===13){
+    if (target.charCode === 13) {
       this.addNewTask();
     } 
   }
@@ -78,7 +78,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Cockpit 
+        <Statistics 
           title={appTitle}
           countOfAllTasks={tasks.length}
           countOfCompletedTasks={listOfCompletedTask.length}
